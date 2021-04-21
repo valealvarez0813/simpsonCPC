@@ -1,0 +1,38 @@
+#logo img{
+    display: block;
+    margin-left:auto ;
+    margin-right: auto;
+    
+}
+
+header{
+    font-family: 'Lobster', cursive;
+    
+}
+header nav{
+    text-align: center;
+}
+header nav li{
+    display: inline-block;
+    padding: 20px;
+    font-size: 24px;
+    color: black;
+}
+header nav a{
+    text-decoration: none;
+    color:inherit;
+
+}
+header nav a:hover{
+    color: yellow;
+    text-decoration:underline;
+    text-decoration-color:rgba(141, 141, 50, 0.602) ;
+}
+.imagenBanner{
+    height: 500px;
+}
+.fondo1{
+    background-color:black;
+    color:yellow;
+
+}
