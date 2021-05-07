@@ -36,3 +36,30 @@ header nav a:hover{
     color:yellow;
 
 }
+.fondo1 a i:hover{
+    transform: scale(0.8);
+    padding-bottom: 15px;
+    color: yellow;
+}
+.coloricono{
+    color: yellow;
+}
+.fondoFooter{
+   
+        background: yellow;
+        height: 200px;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    background-color: yellow;
+}
+.letra{
+    font-family: 'Lobster', cursive;
+}
+.fondomovil{
+    background-image: url(../img/banner5.jpg);
+    height:200px;;
+    background-attachment: fixed;
+}
