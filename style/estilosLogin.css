@@ -1,0 +1,14 @@
+.fondoFooter{
+   
+    background: yellow;
+    height: 200px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+background-color: yellow;
+}
+.letra{
+    font-family: 'Gloria Hallelujah', cursive;
+}

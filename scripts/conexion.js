@@ -21,7 +21,7 @@ function ConectarGiphy(condicion){
     .then(datos=>organizarDatos(datos));
      
 }else{
-     fetch(url)
+    fetch(url)
     .then(respuesta=>respuesta.json())
     .then(datos=>organizarBusqueda(datos));
 }
@@ -43,7 +43,8 @@ function organizarDatos(datos){
     });
 }
 
-function organizarBusqueda(datos){
+function organizarBusqueda(datos)
+{
 let contenedorpadre=document.getElementById("contenedor");
 while(contenedorpadre.firstChild){
 
