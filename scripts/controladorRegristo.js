@@ -3,6 +3,12 @@ let boton=document.getElementById("botonEnvio");
 let nombreUsuario=document.getElementById("nombreUsuario");
 let correoUsuario=document.getElementById("correoUsuario");
 let password1=document.getElementById("password1");
+let modal=new bootstrap.Modal(document.getElementById("mensaje"));
+let formulario=document.getElementById("formulario");
+
+let llave1;
+let llave2;
+let llave3;
 
 
 boton.addEventListener("click",recibirDatosFormulario);
@@ -66,10 +72,34 @@ else{
   correoUsuario.classList.remove("is-invalid")
   password1.classList.remove("is-invalid")
 
+  //console.log(nombreUsuariovalor,correoUsuariovalor,password1valor);
+  llave1="nombre="+nombreUsuariovalor;
+  llave2="correo="+correoUsuariovalor;
+  llave3="password="+password1valor;
+  
+  conectarAPI();
+
 }
 }
+function conectarAPI(){
+  let url="http://localhost/apicpc/public/usuarios/nuevo";
+   
+  let parametros={
+    method:"POST",
+    headers:{"Content-Type": 'application/x-www-form-urlencoded'},
+    body:llave1+"&"+llave2+"&"+llave3
+  }
+  fetch(url,parametros)
+    .then(respuesta=>respuesta.json())
+    .then(datos=>validarRespuesta(datos));
+}
 
-
+function validarRespuesta(datos){
+if(datos.estado){
+  modal.show();
+  formulario.reset();
+}
+}
 
 
 
